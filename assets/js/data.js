@@ -3,7 +3,7 @@
 
 
 const teamData = {
-    // 导师团队（教师）
+    // 教职成员（教师）
     coreMembers: [
         {
             id: 'xipeng-qiu',
