@@ -20,12 +20,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      # 如果需要 build 步骤，这里可加入
+        
+      # 这里直接上传整个仓库根目录作为 Pages 内容
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          name: github-pages-assets
-          path: "./assets"
+          path: "."  # 注意这里部署的是整个仓库根目录
 
   deploy:
     needs: build
@@ -37,5 +37,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          artifact_name: github-pages-assets
