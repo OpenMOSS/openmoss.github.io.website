@@ -32,7 +32,7 @@ const teamData = {
             },
             photo: 'assets/img/Xinchi Chen.jpg',
             email: 'chenxinchi@fudan.edu.cn',
-            homepage: 'https://ichn.xyz'
+            homepage: 'https://dalstonchen.github.io/'
         },
         {
             id: 'jinlan-fu',
