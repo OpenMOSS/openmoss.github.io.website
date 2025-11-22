@@ -21,9 +21,18 @@
       console.error('SPA_DATA 未加载');
       return;
     }
-    // 从 localStorage 读取语言设置
-    currentLang = localStorage.getItem('language') || 'zh';
+    // 从 localStorage 读取语言设置，或检测浏览器语言
+    let savedLang = localStorage.getItem('language');
+    if (!savedLang) {
+      // 检测浏览器语言
+      const browserLang = navigator.language || navigator.userLanguage;
+      // 如果浏览器语言是中文（zh, zh-CN, zh-TW 等），使用中文，否则使用英文
+      savedLang = browserLang.toLowerCase().startsWith('zh') ? 'zh' : 'en';
+    }
+    currentLang = savedLang;
     window.currentLang = currentLang;
+    // 设置 html lang 属性
+    document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
     renderShell();
     window.addEventListener('hashchange', handleRoute);
     handleRoute();
@@ -83,6 +92,8 @@
       currentLang = currentLang === 'zh' ? 'en' : 'zh';
       localStorage.setItem('language', currentLang);
       window.currentLang = currentLang;
+      // 更新 html lang 属性
+      document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
       // 重新渲染整个应用
       renderShell();
       handleRoute();
@@ -94,12 +105,12 @@
 
     // 地址列表，支持内嵌链接
     const addresses = currentLang === 'zh' ? [
-      '杨浦区淞沪路2005号 <a href="https://www.fudan.edu.cn/" target="_blank" class="footer-inline-link">复旦大学</a> 二号交叉学科楼',
       '徐汇区华发路699弄3号 <a href="https://www.sii.edu.cn/" target="_blank" class="footer-inline-link">上海创智学院</a>',
+      '杨浦区淞沪路2005号 <a href="https://www.fudan.edu.cn/" target="_blank" class="footer-inline-link">复旦大学</a> 二号交叉学科楼',
       '中国 上海'
     ] : [
-      'Building X2, No. 2005 Songhu Road, <a href="https://www.fudan.edu.cn/" target="_blank" class="footer-inline-link">Fudan University</a>, Yangpu District',
-      '3 Lane 699, Huafa Road, <a href="https://www.sii.edu.cn/" target="_blank" class="footer-inline-link">Shanghai Innovation Institute</a>, Xuhui District',
+      '<a href="https://www.sii.edu.cn/" target="_blank" class="footer-inline-link">Shanghai Innovation Institute</a>, 3 Lane 699, Huafa Road, Xuhui District',
+      'Building X2, <a href="https://www.fudan.edu.cn/" target="_blank" class="footer-inline-link">Fudan University</a>, No. 2005 Songhu Road, Yangpu District',
       'Shanghai, China'
     ];
 

@@ -13,7 +13,7 @@
 
             // 首页 Hero
             'hero.title': 'OpenMOSS 团队',
-            'hero.p1': 'OpenMOSS 团队隶属于上海创智学院，并与复旦大学及模思智能保持紧密合作。在邱锡鹏教授的带领下，团队围绕大语言模型（LLMs）开展前沿研究，重点推进模型架构、评测方法与应用场景等方向，致力于打造开放、协作且具有实际影响力的人工智能创新成果。',
+            'hero.p1': 'OpenMOSS 团队隶属于上海创智学院，并与复旦大学及模思智能保持紧密合作。在邱锡鹏教授的带领下，团队围绕大语言模型开展前沿研究，重点推进模型架构、评测方法与应用场景等方向，致力于打造开放、协作且具有实际影响力的人工智能创新成果。',
             'hero.p2': '团队成员在人工智能领域具有坚实积累，培养的毕业生任职或深造于 MIT、UC Berkeley、CMU、FDU、SJTU 等世界顶尖高校，或加入 ByteDance、Alibaba、Tencent、AWS、Google、Microsoft、Optiver 等领先企业，或投身创新创业，形成了充满活力的学术与创新生态。',
             'hero.btn.highlights': '最新亮点',
             'hero.btn.join': '加入我们',
@@ -277,13 +277,13 @@
             // Footer
             'footer.contact': 'Contact',
             'footer.address': 'Address',
-            'footer.address1': '3 Lane 699, Huafa Road, Xuhui District',
-            'footer.address2': 'Building X2, No. 2005 Songhu Road, Yangpu District',
+            'footer.address1': 'Shanghai Innovation Institute, 3 Lane 699, Huafa Road, Xuhui District',
+            'footer.address2': 'Building X2, Fudan University, No. 2005 Songhu Road, Yangpu District',
             'footer.address3': 'Shanghai, China',
             'footer.partners': 'Affiliations',
             'footer.fudan': 'School of Computer Science and Innovation, Fudan University',
             'footer.teai': 'Institute of Trustworthy Embodied Intelligence, Fudan University',
-            'footer.nlp': 'Fudan NLP Lab',
+            'footer.nlp': 'The Fudan University Natural Language Processing Group',
 
             // Webmaster
             'webmaster.title': 'Webmaster',

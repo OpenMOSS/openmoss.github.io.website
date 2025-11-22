@@ -1006,9 +1006,14 @@ html[lang="en"] #resources .resource-card h3 {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 0.4fr 1.3fr 1.3fr;
+  grid-template-columns: 0.3fr 1.4fr 1.3fr;
   gap: 24px;
   width: 100%;
+}
+
+/* 中文版页脚第一列调整 - 给"联系方式"更多空间 */
+html[lang="zh-CN"] .footer-grid {
+  grid-template-columns: 0.6fr 1.3fr 1.1fr;
 }
 
 .footer h4 {
