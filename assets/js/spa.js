@@ -404,12 +404,13 @@
       { key: 'arch', titleKey: 'pillar.arch.title', descKey: 'pillar.arch.desc' }
     ];
 
-    // 示例高亮内容
-    const highlights = [
-      { title: 'MOSS: 开源对话语言模型', desc: '首个国内开源的对话式大语言模型，支持插件系统。', date: '2023.04' },
-      { title: 'AnyGPT: 多模态统一建模', desc: '实现语音、图像、文本的统一离散序列建模。', date: '2024.02' },
-      { title: 'SpeechGPT: 端到端语音对话', desc: 'GPT-4o 级别的实时语音交互系统。', date: '2024.06' }
-    ];
+    // 从 SPA_DATA 获取最新亮点内容，并处理多语言
+    const highlights = (SPA_DATA.highlights || []).map(h => ({
+      title: typeof h.title === 'object' ? (h.title[currentLang] || h.title.zh) : h.title,
+      desc: typeof h.desc === 'object' ? (h.desc[currentLang] || h.desc.zh) : h.desc,
+      date: h.date,
+      url: h.url
+    }));
 
     return `
       <section class="container sec" id="research-main">
@@ -431,7 +432,7 @@
         <h2>${t('research.highlights.title')}</h2>
         <div class="highlights-list">
           ${highlights.map(h => `
-            <article class="highlight-item">
+            <article class="highlight-item" ${h.url ? `onclick="window.open('${h.url}', '_blank')" style="cursor: pointer;"` : ''}>
               <div class="highlight-date">${h.date}</div>
               <div class="highlight-content">
                 <h3>${h.title}</h3>
@@ -483,20 +484,21 @@
   }
 
   function renderResources() {
-    const courses = [
-      { title: t('resources.course.prml'), desc: t('resources.course.prml.desc'), url: 'https://mooc1.chaoxing.com/course/224348208.html', label: t('resources.btn.course') },
-      { title: t('resources.course.exercises'), desc: t('resources.course.exercises.desc'), url: 'https://fudan-nlp.feishu.cn/wiki/WFifwXxfQiI3PKkn9FEcy0wKnjh', label: t('resources.btn.exercise') },
-      { title: t('resources.course.community'), desc: t('resources.course.community.desc'), url: 'https://github.com/WillQvQ/SummerQuest-2025', label: t('resources.btn.summer') }
-    ];
+    // 从 SPA_DATA 获取课程和项目数据
+    const courses = (SPA_DATA.courses || []).map(c => ({
+      title: t(c.titleKey),
+      desc: t(c.descKey),
+      url: c.url,
+      label: t(c.labelKey)
+    }));
 
-    const projects = [
-      { name: 'MOSS', desc: t('resources.project.moss'), stars: '12k+ ⭐', stack: 'Python', url: 'https://github.com/OpenMOSS/MOSS' },
-      { name: 'AnyGPT', desc: t('resources.project.anygpt'), stars: '500+ ⭐', stack: 'Python', url: 'https://github.com/OpenMOSS/AnyGPT' },
-      { name: 'MOSS-TTSD', desc: t('resources.project.ttsd'), stars: '200+ ⭐', stack: 'Python', url: 'https://github.com/OpenMOSS/MOSS-TTSD' },
-      { name: 'SpeechGPT-2.0', desc: t('resources.project.speechgpt'), stars: '360+ ⭐', stack: 'Python', url: 'https://github.com/OpenMOSS/SpeechGPT-2.0-preview' },
-      { name: 'DiRL', desc: t('resources.project.dirl'), stars: '100+ ⭐', stack: 'Python', url: 'https://github.com/OpenMOSS/DiRL' },
-      { name: 'Language-Model-SAEs', desc: t('resources.project.saes'), stars: '164+ ⭐', stack: 'Python', url: 'https://github.com/OpenMOSS/Language-Model-SAEs' }
-    ];
+    const projects = (SPA_DATA.projects || []).map(p => ({
+      name: p.name,
+      desc: t(p.descKey),
+      stars: p.stars,
+      stack: p.stack,
+      url: p.url
+    }));
 
     return `
       <section class="container sec">
@@ -536,23 +538,18 @@
   }
 
   function renderPositions() {
-    const cards = [
-      { id: 'phd', title: t('positions.card.phd'), desc: t('positions.card.phd.desc') },
-      { id: 'master', title: t('positions.card.master'), desc: t('positions.card.master.desc') },
-      { id: 'intern', title: t('positions.card.intern'), desc: t('positions.card.intern.desc') },
-      { id: 'postdoc', title: t('positions.card.postdoc'), desc: t('positions.card.postdoc.desc') },
-      { id: 'visiting', title: t('positions.card.visiting'), desc: t('positions.card.visiting.desc') },
-      { id: 'engineer', title: t('positions.card.engineer'), desc: t('positions.card.engineer.desc') }
-    ];
+    // 从 SPA_DATA 获取职位卡片和为什么选择我们的数据
+    const cards = (SPA_DATA.positionCards || []).map(c => ({
+      id: c.id,
+      title: t(c.titleKey),
+      desc: t(c.descKey)
+    }));
 
-    const whyUs = [
-      { icon: '✨', title: t('positions.why.research'), desc: t('positions.why.research.desc') },
-      { icon: '🚀', title: t('positions.why.resources'), desc: t('positions.why.resources.desc') },
-      { icon: '👥', title: t('positions.why.team'), desc: t('positions.why.team.desc') },
-      { icon: '💡', title: t('positions.why.opensource'), desc: t('positions.why.opensource.desc') },
-      { icon: '🌏', title: t('positions.why.collaboration'), desc: t('positions.why.collaboration.desc') },
-      { icon: '📈', title: t('positions.why.career'), desc: t('positions.why.career.desc') }
-    ];
+    const whyUs = (SPA_DATA.whyUs || []).map(item => ({
+      icon: item.icon,
+      title: t(item.titleKey),
+      desc: t(item.descKey)
+    }));
 
     return `
       <section class="container sec">

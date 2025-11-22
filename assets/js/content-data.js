@@ -4,13 +4,62 @@
       name: 'OpenMOSS',
       tagline: '开放、可信赖的基础模型研究'
     },
+    highlights: [
+      {
+        title: { zh: 'MOSS-Speech: 真语音到语音生成', en: 'MOSS-Speech: True Speech-to-Speech Generation' },
+        desc: { zh: '原生端到端语音交互，无需任何中间文本引导', en: 'Native end-to-end speech interaction without any intermediate text guidance' },
+        date: '2025.10.1',
+        url: 'https://arxiv.org/abs/2510.00499'
+      },
+      {
+        title: { zh: 'XY-Tokenizer: 低码率声学语义统一编码', en: 'XY-Tokenizer: Low-Bitrate Unified Acoustic-Semantic Encoding' },
+        desc: { zh: '1kbps最强声学语义统一编码及离散化工具', en: 'State-of-the-art 1kbps unified acoustic-semantic encoding and discretization tool' },
+        date: '2025.6.28',
+        url: 'https://arxiv.org/abs/2506.23325'
+      },
+      {
+        title: { zh: 'MOSS-TTSD: 文本到对话语音生成', en: 'MOSS-TTSD: Text-to-Spoken Dialogue Generation' },
+        desc: { zh: '开源对话语音生成模型，高表现力，多说话人，超长语音生成', en: 'Open-source dialogue speech generation model with high expressiveness, multi-speaker, and long-form speech generation' },
+        date: '2025.6.20',
+        url: 'https://www.open-moss.com/en/moss-ttsd/'
+      }
+    ],
+    courses: [
+      { titleKey: 'resources.course.prml', descKey: 'resources.course.prml.desc', url: 'https://mooc1.chaoxing.com/course/224348208.html', labelKey: 'resources.btn.course' },
+      { titleKey: 'resources.course.exercises', descKey: 'resources.course.exercises.desc', url: 'https://fudan-nlp.feishu.cn/wiki/WFifwXxfQiI3PKkn9FEcy0wKnjh', labelKey: 'resources.btn.exercise' },
+      { titleKey: 'resources.course.community', descKey: 'resources.course.community.desc', url: 'https://github.com/WillQvQ/SummerQuest-2025', labelKey: 'resources.btn.summer' }
+    ],
+    projects: [
+      { name: 'MOSS', descKey: 'resources.project.moss', stars: '12k+ ⭐', stack: 'Python', url: 'https://github.com/OpenMOSS/MOSS' },
+      { name: 'AnyGPT', descKey: 'resources.project.anygpt', stars: '500+ ⭐', stack: 'Python', url: 'https://github.com/OpenMOSS/AnyGPT' },
+      { name: 'MOSS-TTSD', descKey: 'resources.project.ttsd', stars: '200+ ⭐', stack: 'Python', url: 'https://github.com/OpenMOSS/MOSS-TTSD' },
+      { name: 'SpeechGPT-2.0', descKey: 'resources.project.speechgpt', stars: '360+ ⭐', stack: 'Python', url: 'https://github.com/OpenMOSS/SpeechGPT-2.0-preview' },
+      { name: 'DiRL', descKey: 'resources.project.dirl', stars: '100+ ⭐', stack: 'Python', url: 'https://github.com/OpenMOSS/DiRL' },
+      { name: 'Language-Model-SAEs', descKey: 'resources.project.saes', stars: '164+ ⭐', stack: 'Python', url: 'https://github.com/OpenMOSS/Language-Model-SAEs' }
+    ],
+    positionCards: [
+      { id: 'graduate', titleKey: 'positions.card.phd', descKey: 'positions.card.phd.desc' },
+      { id: 'graduate', titleKey: 'positions.card.master', descKey: 'positions.card.master.desc' },
+      { id: 'intern', titleKey: 'positions.card.intern', descKey: 'positions.card.intern.desc' },
+      { id: 'postdoc', titleKey: 'positions.card.postdoc', descKey: 'positions.card.postdoc.desc' },
+      { id: 'engineer', titleKey: 'positions.card.engineer', descKey: 'positions.card.engineer.desc' },
+      { id: 'visiting', titleKey: 'positions.card.visiting', descKey: 'positions.card.visiting.desc' }
+    ],
+    whyUs: [
+      { icon: '✨', titleKey: 'positions.why.research', descKey: 'positions.why.research.desc' },
+      { icon: '🚀', titleKey: 'positions.why.resources', descKey: 'positions.why.resources.desc' },
+      { icon: '👥', titleKey: 'positions.why.team', descKey: 'positions.why.team.desc' },
+      { icon: '💡', titleKey: 'positions.why.opensource', descKey: 'positions.why.opensource.desc' },
+      { icon: '🌏', titleKey: 'positions.why.collaboration', descKey: 'positions.why.collaboration.desc' },
+      { icon: '📈', titleKey: 'positions.why.career', descKey: 'positions.why.career.desc' }
+    ],
     positions: {
       applyUrl: 'https://fudannlp.feishu.cn/share/base/form/shrcn29UYq1MCpTH0GBZh3AWPPg',
       // 职位详情（双语支持）
       details: [
         {
-          id: 'phd',
-          title: { zh: '博士研究生', en: 'PhD Students' },
+          id: 'graduate',
+          title: { zh: '博士/硕士研究生', en: 'PhD/Master\'s Students' },
           blocks: [
             {
               subtitle: { zh: '招收对象', en: 'Target Candidates' },
@@ -47,7 +96,7 @@
                   '（3）招生途径：夏令营、秋季保研、考研面试均需通过学院初审后联系，我们会安排组内面试。',
                   '（4）本组面试：重视科研潜质、工程能力和团队协作。高质量完成 nlp-beginner 的学生优先。',
                   '（5）提前进组：希望确定来本组的同学提前进组学习，表现优秀可推荐字节、华为等合作单位实习。',
-                  '（6）研究生待遇：在学校补贴基础上提供有竞争力的补助，并对专硕给予一定租房补贴。'
+                  '（6）研究生待遇：在学校补贴基础上提供有竞争力的补助，并对专硕给予一定住房补贴。'
                 ],
                 en: [
                   '(1) Master\'s positions: Subject to research funding, approximately 1 academic master, 1-2 professional masters (recommendation), and ~10 professional masters (entrance exam) per year. We do not distinguish between academic and professional masters in research, and all are eligible for PhD conversion.',
@@ -62,14 +111,14 @@
           ]
         },
         {
-          id: 'master',
-          title: { zh: '硕士研究生', en: 'Master\'s Students' },
+          id: 'intern',
+          title: { zh: '实习生', en: 'Interns' },
           blocks: [
             {
-              subtitle: { zh: '说明', en: 'Note' },
+              subtitle: { zh: '职位介绍', en: 'Position Description' },
               paragraphs: {
-                zh: ['硕士研究生的招生要求与说明请参考上方"博士研究生"部分。'],
-                en: ['Please refer to the "PhD Students" section above for master\'s admission requirements and information.']
+                zh: ['请通过邮件（llm@fudan.edu.cn）或 <a href="https://fudannlp.feishu.cn/share/base/form/shrcn29UYq1MCpTH0GBZh3AWPPg" target="_blank" style="color: var(--fudan-blue); text-decoration: underline;">问卷</a> 进行投递，对于非本地学生有 2000/月的住房补贴。'],
+                en: ['Please apply via email (llm@fudan.edu.cn) or <a href="https://fudannlp.feishu.cn/share/base/form/shrcn29UYq1MCpTH0GBZh3AWPPg" target="_blank" style="color: var(--fudan-blue); text-decoration: underline;">application form</a>. Non-local students receive a housing allowance of 2000 CNY/month.']
               }
             }
           ]
@@ -133,34 +182,21 @@
           ]
         },
         {
-          id: 'visiting',
-          title: { zh: '访问学者', en: 'Visiting Scholars' },
-          blocks: [
-            {
-              subtitle: { zh: '说明', en: 'Note' },
-              paragraphs: {
-                zh: ['访问学者详细内容持续更新中，如有兴趣请邮件咨询。'],
-                en: ['Details for visiting scholars are being updated. Please contact us via email if interested.']
-              }
-            }
-          ]
-        },
-        {
           id: 'engineer',
           title: { zh: '研究工程师', en: 'Research Engineers' },
           blocks: [
             {
               subtitle: { zh: '关于岗位', en: 'About the Position' },
               paragraphs: {
-                zh: ['复旦大学自然语言实验室因科研工作需要，长期招聘科研工程助理，待遇面议。'],
-                en: ['Fudan NLP Lab is recruiting research engineering assistants for long-term positions. Compensation is negotiable.']
+                zh: ['OpenMOSS 团队因科研工作需要，长期招聘科研工程助理，待遇面议。'],
+                en: ['OpenMOSS Team is recruiting research engineering assistants for long-term positions. Compensation is negotiable.']
               }
             },
             {
               subtitle: { zh: '招聘说明', en: 'Job Description' },
               paragraphs: {
                 zh: [
-                  '参与实验室的 LLM 工程开发项目。',
+                  '参与实验室的大语言模型工程开发项目。',
                   '具备良好的工程经验，熟练掌握 Python，熟悉 PyTorch 并有 NLP 项目经验者优先。',
                   '具有专研精神，工作踏实认真。'
                 ],
@@ -187,14 +223,14 @@
           ]
         },
         {
-          id: 'intern',
-          title: { zh: '实习生', en: 'Interns' },
+          id: 'visiting',
+          title: { zh: '访问学者', en: 'Visiting Scholars' },
           blocks: [
             {
-              subtitle: { zh: '职位介绍', en: 'Position Description' },
+              subtitle: { zh: '说明', en: 'Note' },
               paragraphs: {
-                zh: ['实习生岗位内容将于近期补充，欢迎提前投递意向。'],
-                en: ['Internship details will be updated soon. Early applications are welcome.']
+                zh: ['请邮件 xpqiu@fudan.edu.cn 咨询。'],
+                en: ['Please contact xpqiu@fudan.edu.cn for inquiries.']
               }
             }
           ]
@@ -223,7 +259,10 @@
           year: '2025',
           support: true,
           alphabetical: true,
-          links: [{ type: 'GitHub', url: 'https://github.com/OpenMOSS/SpeechGPT-2.0-preview' }]
+          links: [
+            { type: 'GitHub', url: 'https://github.com/OpenMOSS/SpeechGPT-2.0-preview' },
+            { type: 'Blog', url: 'https://www.open-moss.com/en/speechgpt2-preview/' }
+          ]
         },
         {
           title: 'MOSS-TTSD: Zero-Shot Multi-Speaker Dialogue Speech Synthesis',
@@ -232,7 +271,10 @@
           year: '2025',
           support: true,
           alphabetical: true,
-          links: [{ type: 'GitHub', url: 'https://github.com/OpenMOSS/MOSS-TTSD' }]
+          links: [
+            { type: 'GitHub', url: 'https://github.com/OpenMOSS/MOSS-TTSD' },
+            { type: 'Blog', url: 'https://www.open-moss.com/en/moss-ttsd/' }
+          ]
         },
         {
           title: 'MOSS-Speech: Towards True Speech-to-Speech Models Without Text Guidance',
@@ -258,7 +300,10 @@
           venue: '',
           year: '2025',
           alphabetical: true,
-          links: [{ type: 'GitHub', url: 'https://github.com/OpenMOSS/SpeechGPT-2.0-preview' }]
+          links: [
+            { type: 'GitHub', url: 'https://github.com/OpenMOSS/SpeechGPT-2.0-preview' },
+            { type: 'Blog', url: 'https://www.open-moss.com/en/speechgpt2-preview/' }
+          ]
         },
         {
           title: 'MOSS-TTSD: Zero-Shot Multi-Speaker Dialogue Speech Synthesis',
@@ -266,7 +311,10 @@
           venue: '',
           year: '2025',
           alphabetical: true,
-          links: [{ type: 'GitHub', url: 'https://github.com/OpenMOSS/MOSS-TTSD' }]
+          links: [
+            { type: 'GitHub', url: 'https://github.com/OpenMOSS/MOSS-TTSD' },
+            { type: 'Blog', url: 'https://www.open-moss.com/en/moss-ttsd/' }
+          ]
         },
         {
           title: 'MOSS-Speech: Towards True Speech-to-Speech Models Without Text Guidance',
